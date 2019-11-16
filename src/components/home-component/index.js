@@ -14,7 +14,7 @@ const Home = () => {
                     </p>
                 </div>
                 <div className="col-md-6">
-                    <h4>Trainings today:</h4>
+                    <h4>Trainings calendar to come!</h4>
                 </div>
             </div>
         </div>
