@@ -29,9 +29,9 @@ const Trainings = () => {
 
     const columns = [
         {
-            Header: "Date",
+            Header: "Date and time",
             accessor: "date",
-            Cell: ({ value }) => moment(value).format("DD/MM/YYYY")
+            Cell: ({ value }) => moment(value).format("DD/MM/YYYY, hh:mm a")
         },
         {
             Header: "First Name",

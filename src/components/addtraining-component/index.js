@@ -76,7 +76,7 @@ const Addtraining = ({ addTraining, customer, isCustomerHref }) => {
                                 format="MM/dd/yyyy"
                                 margin="normal"
                                 id="date-picker-inline"
-                                label="Date picker inline"
+                                label="Training Date"
                                 value={selectedDate}
                                 onChange={handleDateChange}
                                 KeyboardButtonProps={{
@@ -86,7 +86,7 @@ const Addtraining = ({ addTraining, customer, isCustomerHref }) => {
                             <KeyboardTimePicker
                                 margin="normal"
                                 id="time-picker"
-                                label="Time picker"
+                                label="Training start time"
                                 value={selectedDate}
                                 onChange={handleDateChange}
                                 KeyboardButtonProps={{
