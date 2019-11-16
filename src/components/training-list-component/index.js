@@ -53,7 +53,7 @@ const Trainings = () => {
             sortable: false,
             filterable: false,
             Header: "Delete",
-            width: 200,
+            width: 180,
             accessor: "id",
             Cell: ({ value }) => (
                 <Button

@@ -102,7 +102,7 @@ const Customers = () => {
             sortable: false,
             filterable: false,
             Header: "Add Training",
-            width: 200,
+            width: 165,
             Cell: row => (
                 <Addtraining
                     addTraining={addTraining}

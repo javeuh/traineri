@@ -31,7 +31,7 @@ const Editcustomer = ({ customerToEdit, updateCustomer }) => {
     };
 
     const handleInputChange = e => {
-        setCustomer({ ...customerToEdit, [e.target.name]: e.target.value });
+        setCustomer({ ...customer, [e.target.name]: e.target.value });
     };
 
     const updateCurrentCustomer = () => {
