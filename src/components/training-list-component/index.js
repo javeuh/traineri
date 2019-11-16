@@ -74,6 +74,7 @@ const Trainings = () => {
         return (
             <div>
                 <Headertext headerText="Training listing"></Headertext>
+                <h5>Total {trainings.length} trainings</h5>
                 <ReactTable
                     filterable={true}
                     data={trainings}

@@ -136,6 +136,7 @@ const Customers = () => {
         return (
             <div>
                 <Headertext headerText="Customers listing"></Headertext>
+                <h5>Total {customers.length} customers</h5>
                 <Addcustomer saveCustomer={saveCustomer} />
                 <ReactTable
                     filterable={true}
