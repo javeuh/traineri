@@ -5,26 +5,26 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
-import { makeStyles } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
+import DateFnsUtils from "@date-io/date-fns";
+import {
+    MuiPickersUtilsProvider,
+    KeyboardTimePicker,
+    KeyboardDatePicker
+} from "@material-ui/pickers";
 
-const useStyles = makeStyles(theme => ({
-    container: {
-        display: "flex",
-        flexWrap: "wrap"
-    },
-    textField: {
-        marginLeft: theme.spacing(1),
-        marginRight: theme.spacing(1),
-        width: 200
-    }
-}));
 const Addtraining = ({ addTraining, customer, isCustomerHref }) => {
-    const classes = useStyles();
     const emptyTraining = {
         date: "",
         activity: "",
         duration: "",
         customer: customer.links.find(isCustomerHref).href
+    };
+
+    const [selectedDate, setSelectedDate] = useState(new Date());
+    const handleDateChange = date => {
+        setSelectedDate(date);
+        setTraining({ ...training, date: date });
     };
 
     const [open, setOpen] = useState(false);
@@ -47,7 +47,7 @@ const Addtraining = ({ addTraining, customer, isCustomerHref }) => {
         addTraining(training);
         handleClose();
     };
-
+    console.log(training);
     return (
         <div>
             <Button
@@ -68,19 +68,33 @@ const Addtraining = ({ addTraining, customer, isCustomerHref }) => {
                     {customer.firstname + " " + customer.lastname}
                 </DialogTitle>
                 <DialogContent>
-                    <TextField
-                        autoFocus
-                        id="date"
-                        label="Training Date"
-                        name="date"
-                        type="date"
-                        value={training.date}
-                        className={classes.textField}
-                        InputLabelProps={{
-                            shrink: true
-                        }}
-                        onChange={e => handleInputChange(e)}
-                    />
+                    <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                        <Grid container justify="space-around">
+                            <KeyboardDatePicker
+                                disableToolbar
+                                variant="inline"
+                                format="MM/dd/yyyy"
+                                margin="normal"
+                                id="date-picker-inline"
+                                label="Date picker inline"
+                                value={selectedDate}
+                                onChange={handleDateChange}
+                                KeyboardButtonProps={{
+                                    "aria-label": "change date"
+                                }}
+                            />
+                            <KeyboardTimePicker
+                                margin="normal"
+                                id="time-picker"
+                                label="Time picker"
+                                value={selectedDate}
+                                onChange={handleDateChange}
+                                KeyboardButtonProps={{
+                                    "aria-label": "change time"
+                                }}
+                            />
+                        </Grid>
+                    </MuiPickersUtilsProvider>
                     <TextField
                         margin="dense"
                         name="activity"
