@@ -3,17 +3,16 @@
 }
 
 .white-text-nav {
-    color: #fff !important;
-    border-bottom: 2px solid transparent;
+    color: rgb(209, 209, 209) !important;
 }
 
 .white-text-nav:hover:not(.active-link) {
-    color: rgb(173, 173, 173) !important;
-    border-bottom: 2px solid transparent;
+    color: rgb(255, 255, 255) !important;
 }
 
 .active-link {
-    border-bottom: 2px solid white;
+    font-weight: 700;
+    color: rgb(255, 255, 255) !important;
 }
 
 .fixed-top {

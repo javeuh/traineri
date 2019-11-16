@@ -5,7 +5,7 @@ import Nav from "react-bootstrap/Nav";
 
 const Navigator = () => {
     return (
-        <Navbar className="nav-background bg-dark sticky-top" expand="md">
+        <Navbar sticky="top" bg="dark" variant="dark" expand="md">
             <Navbar.Brand>
                 {" "}
                 <NavLink exact className="navbar-brand white-text-nav" to="/">
