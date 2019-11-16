@@ -48,7 +48,6 @@ const Addtraining = ({ addTraining, customer, isCustomerHref }) => {
         handleClose();
     };
 
-    console.log(training);
     return (
         <div>
             <Button
@@ -88,6 +87,7 @@ const Addtraining = ({ addTraining, customer, isCustomerHref }) => {
                         value={training.activity}
                         onChange={e => handleInputChange(e)}
                         label="Activity"
+                        placeholder="Swimming"
                         fullWidth
                     />
                     <TextField
@@ -95,7 +95,8 @@ const Addtraining = ({ addTraining, customer, isCustomerHref }) => {
                         name="duration"
                         value={training.duration}
                         onChange={e => handleInputChange(e)}
-                        label="Duration"
+                        label="Duration in minutes"
+                        placeholder="45"
                         fullWidth
                     />
                 </DialogContent>

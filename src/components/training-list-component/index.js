@@ -12,7 +12,6 @@ const Trainings = () => {
 
     const fetchData = () => {
         axios.get(url).then(res => {
-            console.log(res.data);
             setTrainings(res.data);
         });
     };
@@ -30,9 +29,9 @@ const Trainings = () => {
 
     const columns = [
         {
-            Header: "Date and time",
+            Header: "Date",
             accessor: "date",
-            Cell: ({ value }) => moment(value).format("MMM Do YYYY, h:mm a")
+            Cell: ({ value }) => moment(value).format("DD/MM/YYYY")
         },
         {
             Header: "First Name",
