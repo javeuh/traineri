@@ -15,10 +15,6 @@
     color: rgb(255, 255, 255) !important;
 }
 
-.fixed-top {
-    position: fixed;
-}
-
 .lds-dual-ring {
     margin: 0 auto;
     display: inline-block;

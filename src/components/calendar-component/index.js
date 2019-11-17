@@ -6,7 +6,7 @@ import moment from "moment";
 
 import axios from "axios";
 
-import "./main.scss";
+import "../../main.scss";
 
 const Calendar = () => {
     const url = "https://customerrest.herokuapp.com/gettrainings";
