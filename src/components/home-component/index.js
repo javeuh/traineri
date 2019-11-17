@@ -14,7 +14,7 @@ const Home = () => {
                     </p>
                 </div>
                 <div className="col-md-6">
-                    <h4>Trainings calendar to come!</h4>
+                    <h4>Now with calendar. Try it out!</h4>
                 </div>
             </div>
         </div>

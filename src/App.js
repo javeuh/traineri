@@ -4,6 +4,7 @@ import Navigator from "./components/navigator-component";
 import Home from "./components/home-component";
 import Customers from "./components/customer-list-component";
 import Trainings from "./components/training-list-component";
+import Calendar from "./components/calendar-component";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../src/app.css";
 
@@ -16,6 +17,7 @@ function App() {
                     <Route exact path="/" component={Home} />
                     <Route path="/customers" component={Customers} />
                     <Route path="/trainings" component={Trainings} />
+                    <Route path="/calendar" component={Calendar} />
                 </Switch>
             </div>
         </div>

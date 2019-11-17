@@ -29,6 +29,13 @@ const Navigator = () => {
                     >
                         Trainings
                     </NavLink>
+                    <NavLink
+                        className="nav-link white-text-nav"
+                        activeClassName="active-link"
+                        to="/calendar"
+                    >
+                        Calendar
+                    </NavLink>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
